@@ -1,0 +1,44 @@
+Downloaded T-COFFEE_distribution_Version_13.45.0.4846264.tar.gz from http://www.tcoffee.org/Packages/Stable/Latest/
+
+mv ~/Downloads/T-COFFEE* ~/Desktop/ncbi_dataset
+# cd ncbi_dataset/T-COFFEE*
+# ./install all
+
+
+*********************************************************************
+********              FINALIZE YOUR INSTALLATION    *****************
+*********************************************************************
+------- Your third party executables are in:
+-------       /Users/kaitlynabshire/.t_coffee/plugins/macosx:
+------- Your t_coffee exccutable is in
+-------       /Users/kaitlynabshire/.t_coffee/bin/macosx:
+------- In order to make your installation permanent add these two lines
+export PATH=/Users/kaitlynabshire/.t_coffee/bin/macosx:$PATH
+export PLUGINS_4_TCOFFEE=/Users/kaitlynabshire/.t_coffee/plugins/macosx:
+
+
+# Sudo vim .bash_profile
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+export PATH=/Users/kaitlynabshire/.t_coffee/bin/macosx:$PATH
+export PLUGINS_4_TCOFFEE=/Users/kaitlynabshire/.t_coffee/plugins/macosx:
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
