@@ -1,0 +1,5 @@
+atp6_gene.fna was moved to T-COFFEE_distribution_Version_13.45.0.4846264 file
+mv ~/desktop/ncbi*/cox1/atp6_gene.fna ~desktop/ncbi*/T-COFFEE*
+
+# cd desktop/ncbi_dataset/T-COFFEE*
+t_coffee atp6_gene.fna
