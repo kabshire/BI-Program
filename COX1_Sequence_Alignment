@@ -1,1 +1,6 @@
-# cd ncbi_dataset
+cox1_gene.fna was moved to T-COFFEE_distribution_Version_13.45.0.4846264 file
+mv ~/desktop/ncbi*/cox1/cox1_gene.fna ~desktop/ncbi*/T-COFFEE*
+
+# cd desktop/ncbi_dataset/T-COFFEE*
+t_coffee cox1_gene.fna
+
