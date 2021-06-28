@@ -1,0 +1,7 @@
+Followed instruction for Mrbayes installation from https://nbisweden.github.io/MrBayes/download.html
+
+# cd desktop/ncbi_database
+# git clone --depth=1 https://github.com/NBISweden/MrBayes.git
+# cd MrBayes
+# ./configure
+
