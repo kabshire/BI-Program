@@ -1,0 +1,15 @@
+Downloaded RaxML from https://github.com/amkozlov/raxml-ng
+
+mv ~/Downloads/raxml* ~/Desktop/ncbi_dataset
+# cd ncbi_dataset/raxml*
+
+# ./raxml-ng -v
+
+RAxML-NG v. 1.0.2 released on 22.02.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz, 2 cores, 8 GB RAM
+
