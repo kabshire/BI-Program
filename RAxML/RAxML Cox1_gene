@@ -1,3 +1,5 @@
+# cd desktop/ncbi_database/raxml*
+
 # ./raxml-ng --msa cox1_gene_aln.fna --model GTR+G
 
 RAxML-NG v. 1.0.2 released on 22.02.2021 by The Exelixis Lab.
