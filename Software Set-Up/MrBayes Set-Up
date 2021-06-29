@@ -4,4 +4,126 @@ Followed instruction for Mrbayes installation from https://nbisweden.github.io/M
 # git clone --depth=1 https://github.com/NBISweden/MrBayes.git
 # cd MrBayes
 # ./configure
+# brew tap brewsci/bio
+
+==> Tapping brewsci/bio
+Cloning into '/usr/local/Homebrew/Library/Taps/brewsci/homebrew-bio'...
+remote: Enumerating objects: 13905, done.
+remote: Counting objects: 100% (681/681), done.
+remote: Compressing objects: 100% (493/493), done.
+remote: Total 13905 (delta 251), reused 585 (delta 187), pack-reused 13224
+Receiving objects: 100% (13905/13905), 2.85 MiB | 12.97 MiB/s, done.
+Resolving deltas: 100% (9489/9489), done.
+Tapped 321 formulae (346 files, 3.7MB).
+
+# brew install mrbayes --with-open-mpi
+
+==> Installing mrbayes from brewsci/bio
+==> Downloading https://ghcr.io/v2/homebrew/core/beagle/manifests/3.1.2_1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/beagle/blobs/sha256:1ad3ce29568
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:2cc3a9582
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.2.1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:6a44705536f25c
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.24
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/blobs/sha256:d8c7026042e122
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.1.0
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/blobs/sha256:1e8eb0326f62d
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.2.1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/blobs/sha256:754667644cc
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.0
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:eae17621cfc66
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/11.1.0_1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:4ec68e83ce46f4
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/hwloc/manifests/2.5.0
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/hwloc/blobs/sha256:d0b225d121dc
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/manifests/1.1.1k
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/1.1/blobs/sha256:17d94c
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/manifests/2.1.12
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:45758b448
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/open-mpi/manifests/4.1.1_2
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/open-mpi/blobs/sha256:da310195e
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Downloading https://github.com/NBISweden/MrBayes/archive/v3.2.7a.tar.gz
+==> Downloading from https://codeload.github.com/NBISweden/MrBayes/tar.gz/v3.2.7
+ # #=O#-  #                                                                   
+==> Installing dependencies for brewsci/bio/mrbayes: beagle, readline, gmp, isl, mpfr, libmpc, zstd, gcc, hwloc, openssl@1.1, libevent and open-mpi
+==> Installing brewsci/bio/mrbayes dependency: beagle
+==> Pouring beagle--3.1.2_1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/beagle/3.1.2_1: 20 files, 700.8KB
+==> Installing brewsci/bio/mrbayes dependency: readline
+==> Pouring readline--8.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/readline/8.1: 48 files, 1.6MB
+==> Installing brewsci/bio/mrbayes dependency: gmp
+==> Pouring gmp--6.2.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/gmp/6.2.1: 21 files, 3.3MB
+==> Installing brewsci/bio/mrbayes dependency: isl
+==> Pouring isl--0.24.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/isl/0.24: 73 files, 7.3MB
+==> Installing brewsci/bio/mrbayes dependency: mpfr
+==> Pouring mpfr--4.1.0.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/mpfr/4.1.0: 30 files, 5.2MB
+==> Installing brewsci/bio/mrbayes dependency: libmpc
+==> Pouring libmpc--1.2.1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libmpc/1.2.1: 13 files, 425.3KB
+==> Installing brewsci/bio/mrbayes dependency: zstd
+==> Pouring zstd--1.5.0.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/zstd/1.5.0: 31 files, 3.5MB
+==> Installing brewsci/bio/mrbayes dependency: gcc
+==> Pouring gcc--11.1.0_1.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/gcc/11.1.0_1: 2,163 files, 460.2MB
+==> Installing brewsci/bio/mrbayes dependency: hwloc
+==> Pouring hwloc--2.5.0.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/hwloc/2.5.0: 959 files, 10MB
+==> Installing brewsci/bio/mrbayes dependency: openssl@1.1
+==> Pouring openssl@1.1--1.1.1k.big_sur.bottle.tar.gz
+==> Regenerating CA certificate bundle from keychain, this may take a while...
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1k: 8,071 files, 18.5MB
+==> Installing brewsci/bio/mrbayes dependency: libevent
+==> Pouring libevent--2.1.12.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/libevent/2.1.12: 57 files, 2MB
+==> Installing brewsci/bio/mrbayes dependency: open-mpi
+==> Pouring open-mpi--4.1.1_2.big_sur.bottle.tar.gz
+🍺  /usr/local/Cellar/open-mpi/4.1.1_2: 760 files, 15.9MB
+==> Installing brewsci/bio/mrbayes --with-open-mpi
+==> ./configure --prefix=/usr/local/Cellar/mrbayes/3.2.7 --with-mpi=yes
+==> make
+==> make install
+🍺  /usr/local/Cellar/mrbayes/3.2.7: 21 files, 7MB, built in 49 seconds
+
 
