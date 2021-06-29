@@ -1,0 +1,6 @@
+Reformated aln files to fasta:
+
+t_coffee -other_pg seq_reformat -in cox1_gene.aln -output fasta > cox1_gene_aln.fna
+
+t_coffee -other_pg seq_reformat -in atp6_gene.aln -output fasta > atp6_gene_aln.fna
+
