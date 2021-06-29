@@ -1,4 +1,6 @@
-.# ./raxml-ng --msa atp6_gene_aln.fna --model GTR+G
+# cd desktop/ncbi_database/raxml*
+
+# ./raxml-ng --msa atp6_gene_aln.fna --model GTR+G
 
 RAxML-NG v. 1.0.2 released on 22.02.2021 by The Exelixis Lab.
 Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
