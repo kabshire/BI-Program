@@ -19,3 +19,5 @@
 
 07/13/2021
 1) Converted cox1 and atp6 fasta files to nexus files using R Studio
+2) MrBayes block was created and added to the nexus files
+3) 
