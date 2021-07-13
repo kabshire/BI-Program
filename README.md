@@ -12,10 +12,10 @@
 5) Homebrew was downloaded and set up.
 
 07/08/2021
-1) MrBayes was downloaded ans set up.
+1) MrBayes was downloaded and set up.
 2) cox1 and atp6 sequences w/outgroup were re-aligned using T-Coffee 
 3) cox1 and atp6 alignments w/outgroup were converted to fasta using T-Coffee.
 4) cox1 and atp6 alignment fasta files w/outgroup were ran using RAxML.
 
 07/13/2021
-1) 
+1) Converted cox1 and atp6 fasta files to nexus files using R Studio
