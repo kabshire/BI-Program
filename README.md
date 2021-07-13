@@ -20,4 +20,4 @@
 07/13/2021
 1) Converted cox1 and atp6 fasta files to nexus files using R Studio
 2) MrBayes block was created and added to the nexus files
-3) 
+3) "cox1_gene_aln_mb.nex" and "atp6_gene_aln_mb.nex" were ran using MrBayes
