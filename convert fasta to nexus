@@ -1,0 +1,13 @@
+https://zhaott0416.wordpress.com/2015/06/02/how-to-convert-fasta-files-to-nexus-files-in-r/
+
+Using R Studio
+
+> install.packages("seqinr")
+> install.packages("ape")
+
+> data = read.fasta("~/desktop/ncbi_dataset/atp6_gene_aln.fna")
+> library(ape)
+> write.nexus.data(data, file="~/desktop/ncbi_dataset/atp6_gene_aln.fna", format="dna")
+
+> data = read.fasta("~/desktop/ncbi_dataset/cox1_gene_aln.fna")
+> write.nexus.data(data, file="~/desktop/ncbi_dataset/cox1_gene_aln.fna", format="dna")
