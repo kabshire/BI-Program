@@ -5,7 +5,7 @@ setwd("~/desktop/ncbi_dataset/raxml-ng_v1")
 data = read.tree("cox1_gene_aln.fna.raxml.bestTree")
 plot(data, type = "cladogram", edge.width = 2)
 
-rerooted = reroot(data, outgroup = "NC_005827.1_59-1603", resolve.root = "TRUE")
+rerooted = root(data, outgroup = "NC_005827.1_59-1603", resolve.root = "TRUE")
 is.rooted(rerooted)
 plot(rerooted, type = "cladogram", edge.width = 2)
 
