@@ -4,4 +4,4 @@ setwd("~/Desktop/ncbi_dataset/raxml-ng_v1")
 tr <- read.tree("cox1_gene.rooted.raxml.tre")
 new_tiplabels <- c("Cerion incanum", "Cerion uva", "Microceramus pontificus", "Camaena cicatricosa", "Helix aspersa", "Cepaea nemoralis", "Helix pomatia", "Cylindrus obtusus", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Mastigeulota kiangsinensis", "Praticolella mexicana", "Polygyra cereolus", "Meghimatium bilineatum", "Succinea putris", "Lissachatina fulica", "Naesiotus nux", "Oreohelix idahoensis", "Arion vulgaris", "Achatinella mustelina", "Partulina redfieldi", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Albinaria caerulea", "Deroceras reticulatum", "Ryssota otaheitana", "Aplysia californica")
 tr$tip.label <- new_tiplabels
-plot(tr, use.edge.length = FALSE, font = 1)
+plot(tr, use.edge.length = FALSE, font = 3)
