@@ -22,3 +22,6 @@
 2) MrBayes block was created and added to the nexus files.
 3) "cox1_gene_aln_mb.nex" and "atp6_gene_aln_mb.nex" were ran using MrBayes.
 4) "cox1_gene_aln.fna.raxml.bestTree" and "atp6_gene_aln.fna.raxml.bestTree" were rooted using Rstudio.
+
+07/16/2021
+1) "cox1_gene.rooted.raxml.tre" and "atp6_gene.rooted.raxml.tre" had their tip labels renamed and were plotted. 
