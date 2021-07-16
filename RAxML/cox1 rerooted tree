@@ -10,3 +10,4 @@ is.rooted(rerooted)
 plot(rerooted, type = "cladogram", edge.width = 2)
 
 write.nexus(rerooted, file = "cox1_gene.rooted.raxml.nex", translate = TRUE)
+write.tree(rerooted, file = "cox1_gene.rooted.raxml.tre")
