@@ -1,0 +1,9 @@
+library(ape)
+setwd("~/desktop/ncbi_dataset/raxml-ng_v1")
+
+tr <- read.tree("atp6_gene.rooted.raxml.tre")
+new_tiplabels <- c("Microceramus pontificus", "Cerion incanum", "Cerion uva", "Camaena cicatricosa", "Cepaea nemoralis", "Cylindrus obtusus", "Helix aspersa", "Helix pomatia", "Polygyra cereolus", "Praticolella mexicana", "Mastigeulota kiangsinensis", "Dolicheulota formosensis", "Aegista aubryana", "Aegista diversifamilia", "Oreohelix idahoensis", "Lissachatina fulica", "Partulina redfieldi", "Achatinella mustelina", "Pupilla muscorum", "Vertigo pusilla", "Orcula dolium", "Gastrocopta cristata", "Succinea putris", "Ryssota otaheitana", "Deroceras reticulatum", "Naesiotus nux", "Meghimatium bilineatum", "Arion vulgaris", "Albinaria caerulea", "Aplysia californica")
+tr$tip.label <- new_tiplabels
+plot(tr, use.edge.length = FALSE, font = 3)
+
+write.tree(tr, file="atp6_gene.raxml.final.tre")
