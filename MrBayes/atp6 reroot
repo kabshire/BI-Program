@@ -1,0 +1,10 @@
+library(ape)
+setwd("~/desktop/ncbi_dataset/mrbayes")
+
+data = read.nexus("atp6_gene_aln_mb.nex.con.tre")
+plot(data)
+rerooted = root(data, outgroup = "NC_005827.1_c9484-8819", resolve.root = "TRUE")
+is.rooted(rerooted)
+plot(rerooted)
+write.nexus(rerooted, file = "atp6_gene.rooted.mrbayes.nex", translate = TRUE)
+write.tree(rerooted, file = "atp6_gene.rooted.mrbayes.tre")
