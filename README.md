@@ -25,3 +25,5 @@
 
 07/16/2021
 1) "cox1_gene.rooted.raxml.tre" and "atp6_gene.rooted.raxml.tre" had their tip labels renamed and were plotted. 
+2) "cox1_gene_aln_mb.nex.con.tre" and "atp6_gene_aln_mb.nex.con.tre" were rooted using Rstudio.
+3) "cox1_gene.rooted.mrbayes.tre" and "atp6_gene.rooted.mrbayes.tre" had their tip labels renames and were plotted.
