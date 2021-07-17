@@ -1,0 +1,11 @@
+library(ape)
+setwd("~/desktop/ncbi_dataset/mrbayes")
+
+tr <- read.tree("cox1_gene.rooted.mrbayes.tre")
+rooted <- read.tree("cox1_gene.rooted.mrbayes.tre")
+plot(rooted, use.edge.length = FALSE)
+new_tiplabels <- c("Cylindrus obtusus", "Helix aspersa", "Helix pomatia", "Cepaea nemoralis", "Camaena cicatricosa", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Praticolella mexicana", "Polygyra cereolus", "Cerion incanum", "Cerion uva", "Microceramus pontificus", "Meghimatium bilineatum", "Lissachatina fulica", "Succinea putris", "Naesiotus nux", "Oreohelix idahoensis", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Albinaria caerulea", "Arion vulgaris", "Ryssota otaheitana", "Deroceras reticulatum", "Aplysia californica")
+tr$tip.label <- new_tiplabels
+plot(tr, use.edge.length = FALSE, font = 3)
+
+write.tree(tr, file="cox1_gene.mrbayes.final.tre")
