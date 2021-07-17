@@ -1,0 +1,11 @@
+library(ape)
+setwd("~/desktop/ncbi_dataset/mrbayes")
+
+tr <- read.tree("atp6_gene.rooted.mrbayes.tre")
+rooted <- read.tree("atp6_gene.rooted.mrbayes.tre")
+plot(rooted, use.edge.length = FALSE)
+new_tiplabels <- c("Lissachatina fulica", "Orcula dolium", "Vertigo pusilla", "Gastrocopta cristata", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Succinea putris", "Albinaria caerulea", "Arion vulgaris", "Meghimatium bilineatum", "Ryssota otaheitana", "Deroceras reticulatum", "Naesiotus nux", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Camaena cicatricosa", "Cylindrus obtusus", "Cepaea nemoralis", "Helix aspersa", "Helix pomatia", "Polygyra cereolus", "Praticolella mexicana", "Microceramus pontificus", "Cerion incanum", "Cerion uva", "Oreohelix idahoensis", "Aplysia californica")
+tr$tip.label <- new_tiplabels
+plot(tr, use.edge.length = FALSE, font = 3)
+
+write.tree(tr, file="atp6_gene.mrbayes.final.tre")
