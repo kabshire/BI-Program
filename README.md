@@ -29,4 +29,4 @@
 3) "cox1_gene.rooted.mrbayes.tre" and "atp6_gene.rooted.mrbayes.tre" had their tip labels renames and were plotted.
 
 07/25/2021
- 1) Plotted "cox1_gene.raxml.final.tre"
+ 1) Plotted "cox1_gene.raxml.final.tre", "atp6_gene.raxml.final.tre"
