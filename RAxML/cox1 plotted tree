@@ -1,0 +1,25 @@
+library(ape)
+library(ggtree)
+
+tree <- read.tree("cox1_gene.raxml.final.tre")
+new_tiplabels <- c("Cerion incanum", "Cerion uva", "Microceramus pontificus", "Camaena cicatricosa", "Helix aspersa", "Cepaea nemoralis", "Helix pomatia", "Cylindrus obtusus", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Mastigeulota kiangsinensis", "Praticolella mexicana", "Polygyra cereolus", "Meghimatium bilineatum", "Succinea putris", "Lissachatina fulica", "Naesiotus nux", "Oreohelix idahoensis", "Arion vulgaris", "Achatinella mustelina", "Partulina redfieldi", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Albinaria caerulea", "Deroceras reticulatum", "Ryssota otaheitana", "Aplysia californica")
+tree$tip.label <- new_tiplabels
+ggtree(tree, branch.length="none") + 
+  geom_tiplab(align=TRUE, linesize=0.5, fontface="italic") + 
+  geom_cladelabel(node=30, label="Opisthobranch outgroup", offset=6, align=TRUE, barsize=2) + 
+  geom_cladelabel(node=59, label="Limacoidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=54, label="Orthurethra", offset=6, align=TRUE, color="darkgreen") + 
+  xlim(NA, 40) + 
+  geom_cladelabel(node=41, label="Helicoidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=39, label="Urocoptoidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=27, label="Clausilioidea", offset=6, align=TRUE) +
+  geom_cladelabel(node=20, label="Arionoidea", offset=6, align=TRUE, color="steelblue") +
+  geom_cladelabel(node=17, label="Achatinoidea", offset=6, align=TRUE, color="gold") + 
+  geom_cladelabel(node=16, label="Elasmognatha", offset=6, align=TRUE) + 
+  geom_cladelabel(node=19, label="Punctoidea", offset=6, align=TRUE) +
+  geom_cladelabel(node=32, label="Stylommatophora", offset=12, align=TRUE) +
+  geom_hilight(node=17, fill="gold", extend=4) +
+  geom_hilight(node=15, fill="Steelblue", extend=5.25) +
+  geom_hilight(node=18, fill="darkgreen", extend=3.15) +
+  theme_tree() 
+  
