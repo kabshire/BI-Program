@@ -20,4 +20,4 @@ ggtree(tree, branch.length="none") +
   geom_cladelabel(node=35, label="Urocoptoidea", offset=6, align=TRUE) + 
   geom_cladelabel(node=32, label="Stylommatophora", offset=12, align=TRUE) + 
   geom_hilight(node=16, fill="gold", extend=4) +
-  geom_hilight(node=10, fill="Steelblue", extend=4.5) 
+  geom_hilight(node=10, fill="darkgreen", extend=4.5) 
