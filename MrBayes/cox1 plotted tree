@@ -14,7 +14,7 @@ ggtree(tree, branch.length="none") +
   geom_cladelabel(node=55, label="Limacoidea", offset=6, align=TRUE) + 
   geom_cladelabel(node=17, label="Elasmognatha", offset=6, align=TRUE) + 
   geom_cladelabel(node=50, label="Orthurethra", offset=6, align=TRUE) + 
-  geom_cladelabel(node=16, label="Achatinodiea", offset=6, align=TRUE, color="gold") +
+  geom_cladelabel(node=16, label="Achatinoidea", offset=6, align=TRUE, color="gold") +
   geom_cladelabel(node=19, label="Punctoidea", offset=6, align=TRUE) + 
   geom_cladelabel(node=37, label="Helicoidea", offset=6, align=TRUE) +
   geom_cladelabel(node=46, label="Urocoptoidea", offset=6, align=TRUE) + 
