@@ -1,0 +1,25 @@
+library(ape)
+library(ggtree)
+
+tree <- read.tree("cox1_gene.mrbayes.final.tre")
+new_tiplabels <- c("Cylindrus obtusus", "Helix aspersa", "Helix pomatia", "Cepaea nemoralis", "Camaena cicatricosa", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Praticolella mexicana", "Polygyra cereolus", "Cerion incanum", "Cerion uva", "Microceramus pontificus", "Meghimatium bilineatum", "Lissachatina fulica", "Succinea putris", "Naesiotus nux", "Oreohelix idahoensis", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Albinaria caerulea", "Arion vulgaris", "Ryssota otaheitana", "Deroceras reticulatum", "Aplysia californica")
+tree$tip.label <- new_tiplabels
+ggtree(tree, branch.length="none") + 
+  geom_tiplab(align=TRUE, linesize=0.5, fontface="italic") +
+  xlim(NA,40) +
+  geom_cladelabel(node=30, label="Opisthobranch outgroup", offset=6, align=TRUE) +
+  geom_cladelabel(node=26, label="Clausilioidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=27, label="Arionoidea", offset=6, align=TRUE, color="steelblue") +
+  geom_cladelabel(node=18, label="Orthalicoidea", offset=6, align=TRUE) +
+  geom_cladelabel(node=55, label="Limacoidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=17, label="Elasmognatha", offset=6, align=TRUE) + 
+  geom_cladelabel(node=50, label="Orthurethra", offset=6, align=TRUE) + 
+  geom_cladelabel(node=16, label="Achatinodiea", offset=6, align=TRUE, color="gold") +
+  geom_cladelabel(node=19, label="Punctoidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=37, label="Helicoidea", offset=6, align=TRUE) +
+  geom_cladelabel(node=46, label="Urocoptoidea", offset=6, align=TRUE) + 
+  geom_cladelabel(node=32, label="Stylommatophora", offset=12, align=TRUE) + 
+  geom_hilight(node=16, fill="gold", extend=4.15) +
+  geom_hilight(node=15, fill="Steelblue", extend=5.35) + 
+  geom_highlight(node=10, fill="darkgreen", extend=4.75) + 
+  geom_highlight(node=27, fill="steelblue", extend=3.15)
