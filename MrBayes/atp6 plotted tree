@@ -19,4 +19,5 @@ ggtree(tree, branch.length="none") +
   geom_cladelabel(node=46, label="Helicoidea", offset=6, align=TRUE) +
   geom_cladelabel(node=56, label="Urocoptoidea", offset=6, align=TRUE) + 
   geom_cladelabel(node=31, label="Stylommatophora", offset=12, align=TRUE) + 
-  geom_hilight(node=1, fill="gold", extend=4.15) 
+  geom_hilight(node=1, fill="gold", extend=4.15) +
+  geom_highlight(node=25, fill="darkgreen", extend=4.75)
