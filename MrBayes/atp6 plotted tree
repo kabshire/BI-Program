@@ -2,9 +2,15 @@ library(ape)
 library(ggtree)
 
 tree <- read.tree("atp6_gene.mrbayes.final.tre")
-new_tiplabels <- c("Lissachatina fulica", "Orcula dolium", "Vertigo pusilla", "Gastrocopta cristata", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Succinea putris", "Albinaria caerulea", "Arion vulgaris", "Meghimatium bilineatum", "Ryssota otaheitana", "Deroceras reticulatum", "Naesiotus nux", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Camaena cicatricosa", "Cylindrus obtusus", "Cepaea nemoralis", "Helix aspersa", "Helix pomatia", "Polygyra cereolus", "Praticolella mexicana", "Microceramus pontificus", "Cerion incanum", "Cerion uva", "Oreohelix idahoensis", "Aplysia californica")
+new_tiplabels <- c("Lissachatina fulica", "Orcula dolium", "Vertigo pusilla", "Gastrocopta cristata", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Succinea putris", "Albinaria caerulea", "Arion vulgaris", "Meghimatium bilineatum", "Ryssota otaheitana", "Deroceras reticulatum", "Naesiotus nux", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Camaena cicatricosa", "Cylindrus obtusus", "Cepaea nemoralis", "Cornu aspersum", "Helix pomatia", "Polygyra cereolus", "Praticolella mexicana", "Microceramus pontificus", "Cerion incanum", "Cerion uva", "Oreohelix idahoensis", "Aplysia californica")
 tree$tip.label <- new_tiplabels
-ggtree(tree, branch.length="none") + 
+group1 <- list(g1=c("Camaena cicatricosa"), 
+               g2=c("Orcula dolium", "Vertigo pusilla", "Gastrocopta cristata"))
+tree2 <- groupOTU(tree, group1)
+ggtree(tree2, branch.length="none") + 
+  geom_tree(aes(color=group))+
+  theme(legend.position ="none") + 
+  scale_color_manual(values=c("black","purple", "green"))+
   geom_tiplab(align=TRUE, linesize=0.5, fontface="italic") +
   xlim(NA,40) +
   geom_cladelabel(node=30, label="Opisthobranch outgroup", offset=6, align=TRUE) +
@@ -18,6 +24,6 @@ ggtree(tree, branch.length="none") +
   geom_cladelabel(node=29, label="Punctoidea", offset=6, align=TRUE) + 
   geom_cladelabel(node=46, label="Helicoidea", offset=6, align=TRUE) +
   geom_cladelabel(node=56, label="Urocoptoidea", offset=6, align=TRUE) + 
-  geom_cladelabel(node=31, label="Stylommatophora", offset=12, align=TRUE) + 
+  geom_cladelabel(node=32, label="Stylommatophora", offset=12, align=TRUE) + 
   geom_hilight(node=1, fill="gold", extend=4.15) +
   geom_highlight(node=25, fill="darkgreen", extend=4.75)
