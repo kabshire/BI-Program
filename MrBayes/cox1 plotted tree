@@ -2,9 +2,15 @@ library(ape)
 library(ggtree)
 
 tree <- read.tree("cox1_gene.mrbayes.final.tre")
-new_tiplabels <- c("Cylindrus obtusus", "Helix aspersa", "Helix pomatia", "Cepaea nemoralis", "Camaena cicatricosa", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Praticolella mexicana", "Polygyra cereolus", "Cerion incanum", "Cerion uva", "Microceramus pontificus", "Meghimatium bilineatum", "Lissachatina fulica", "Succinea putris", "Naesiotus nux", "Oreohelix idahoensis", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Albinaria caerulea", "Arion vulgaris", "Ryssota otaheitana", "Deroceras reticulatum", "Aplysia californica")
+new_tiplabels <- c("Cylindrus obtusus", "Cornu aspersum", "Helix pomatia", "Cepaea nemoralis", "Camaena cicatricosa", "Mastigeulota kiangsinensis", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Praticolella mexicana", "Polygyra cereolus", "Cerion incanum", "Cerion uva", "Microceramus pontificus", "Meghimatium bilineatum", "Lissachatina fulica", "Succinea putris", "Naesiotus nux", "Oreohelix idahoensis", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Partulina redfieldi", "Achatinella mustelina", "Albinaria caerulea", "Arion vulgaris", "Ryssota otaheitana", "Deroceras reticulatum", "Aplysia californica")
 tree$tip.label <- new_tiplabels
-ggtree(tree, branch.length="none") + 
+group1 <- list(g1=c("Polygyra cereolus", "Praticolella mexicana", "Mastigeulota kiangsinensis"), 
+               g2=c("Succinea putris", "Lissachatina fulica", "Oreohelix idahoensis", "Naesiotus nux"))
+tree2 <- groupOTU(tree, group1)
+ggtree(tree2, branch.length="none") + 
+  geom_tree(aes(color=group))+
+  theme(legend.position ="none") + 
+  scale_color_manual(values=c("black","maroon1", "cyan"))+
   geom_tiplab(align=TRUE, linesize=0.5, fontface="italic") +
   xlim(NA,40) +
   geom_cladelabel(node=30, label="Opisthobranch outgroup", offset=6, align=TRUE) +
