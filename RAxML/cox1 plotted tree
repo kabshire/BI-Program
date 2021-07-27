@@ -2,10 +2,16 @@ library(ape)
 library(ggtree)
 
 tree <- read.tree("cox1_gene.raxml.final.tre")
-new_tiplabels <- c("Cerion incanum", "Cerion uva", "Microceramus pontificus", "Camaena cicatricosa", "Helix aspersa", "Cepaea nemoralis", "Helix pomatia", "Cylindrus obtusus", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Mastigeulota kiangsinensis", "Praticolella mexicana", "Polygyra cereolus", "Meghimatium bilineatum", "Succinea putris", "Lissachatina fulica", "Naesiotus nux", "Oreohelix idahoensis", "Arion vulgaris", "Achatinella mustelina", "Partulina redfieldi", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Albinaria caerulea", "Deroceras reticulatum", "Ryssota otaheitana", "Aplysia californica")
+new_tiplabels <- c("Cerion incanum", "Cerion uva", "Microceramus pontificus", "Camaena cicatricosa", "Cornu aspersum", "Cepaea nemoralis", "Helix pomatia", "Cylindrus obtusus", "Aegista aubryana", "Aegista diversifamilia", "Dolicheulota formosensis", "Mastigeulota kiangsinensis", "Praticolella mexicana", "Polygyra cereolus", "Meghimatium bilineatum", "Succinea putris", "Lissachatina fulica", "Naesiotus nux", "Oreohelix idahoensis", "Arion vulgaris", "Achatinella mustelina", "Partulina redfieldi", "Vertigo pusilla", "Gastrocopta cristata", "Orcula dolium", "Pupilla muscorum", "Albinaria caerulea", "Deroceras reticulatum", "Ryssota otaheitana", "Aplysia californica")
 tree$tip.label <- new_tiplabels
-ggtree(tree, branch.length="none") + 
-  geom_tiplab(align=TRUE, linesize=0.5, fontface="italic") + 
+group1 <- list(g1=c("Mastigeulota kiangsinensis", "Polygyra cereolus", "Praticolella mexicana"), 
+               g2=c("Succinea putris", "Lissachatina fulica", "Oreohelix idahoensis", "Naesiotus nux"))
+tree2 <- groupOTU(tree, group1)
+ggtree(tree2, branch.length="none") +
+  geom_tree(aes(color=group))+
+  theme(legend.position ="none") + 
+  scale_color_manual(values=c("black","maroon1", "cyan"))+
+  geom_tiplab(align=TRUE, linesize=0.5, fontface="italic", linetype='dashed') + 
   geom_cladelabel(node=30, label="Opisthobranch outgroup", offset=6, align=TRUE, barsize=2) + 
   geom_cladelabel(node=59, label="Limacoidea", offset=6, align=TRUE) + 
   geom_cladelabel(node=54, label="Orthurethra", offset=6, align=TRUE) + 
@@ -22,4 +28,4 @@ ggtree(tree, branch.length="none") +
   geom_hilight(node=17, fill="gold", extend=4) +
   geom_hilight(node=15, fill="Steelblue", extend=5.25) +
   geom_highlight(node=20, fill="steelblue", extend=3.15) +
-  geom_highlight(node=13, fill="darkgreen", extend=4.5)
+  geom_highlight(node=13, fill="darkgreen", extend=4.5) 
